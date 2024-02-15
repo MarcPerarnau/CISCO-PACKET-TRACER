@@ -75,3 +75,5 @@ Para verificar los que hemos hecho con anterioridad tenemos que entrar en un PC 
 ```
 ping 192.168.1.56
 ```
+## Resoluciones
+En caso de que el access point no de la IP esperada verificad en que puertos estan conectados los puertos y hacer un renew de IP.
