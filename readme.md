@@ -15,4 +15,63 @@ Configurar laptop: <br>
 1- Cambiar SSID al nombre del SSID del router <br>
 2. Poner la autencication en la escogida al router y la contraseña. <br>
 3. Esperar hasta que se conecte con el router. <br>
-4. 
+
+Configurar smarphone:
+Seguimos los mismos pasos que con el laptop <br>
+
+Que necesitamos: <br>
+- Router <br>
+- Switch <br>
+- 3 PC <br>
+- Access Point <br>
+- Portatil <br>
+- Tablet <br>
+- Smarphone
+
+Connectamos el router con el switch y el switch con el access point, donde se conectaran el portatil, la tablet y el smarphone, <br>
+en el switch conectamos los PC.
+
+## Crear Vlan
+- Dentro del SWITCH:<br>
+```
+enable
+configure terminal
+vlan 10
+name "el nombre que quieras"
+int range fa0/1-20 
+switchport mode acess
+switchport access vlan 10
+```
+```
+vlan 20
+name 'nombre'
+int range fa0/20-24
+switchport mode access
+switchport access vlan 20
+show vlan (muestra las vlna's y sus puertos)
+```
+```
+int fa0/1
+switchport mode trunk 
+Some basic Git commands are:
+```
+- Dentro del Router: <br>
+```
+enable 
+conf terminal 
+int gig0/0/0.10 
+encapsulation dotlq 10 
+ip add 192.168.1.1 255.255.255.0 
+ip dhcp pool 'nombre vlan' 
+network 192.168.1.0 255.255.255.0 
+default-router 192.168.1.1 
+exit
+no sh
+```
+- Dentro del Access Point:  <br>
+- Configurar como el router del principio.
+## Verificar :
+Para verificar los que hemos hecho con anterioridad tenemos que entrar en un PC y hacer un ping. 
+```
+ping 192.168.1.56
+```
