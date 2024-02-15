@@ -68,8 +68,8 @@ default-router 192.168.1.1
 exit
 no sh
 ```
-- Dentro del Access Point:  <br>
-- Configurar como el router del principio.
+##Dentro del Access Point:  <br>
+Hacer lo mismo que se ha hecho para conectar el router de arriba. 
 ## Verificar :
 Para verificar los que hemos hecho con anterioridad tenemos que entrar en un PC y hacer un ping. 
 ```
