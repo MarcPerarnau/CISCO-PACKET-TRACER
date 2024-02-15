@@ -60,7 +60,7 @@ Some basic Git commands are:
 enable 
 conf terminal 
 int gig0/0/0.10 
-encapsulation dotlq 10 
+encapsulation dot1q 10 
 ip add 192.168.1.1 255.255.255.0 
 ip dhcp pool 'nombre vlan' 
 network 192.168.1.0 255.255.255.0 
